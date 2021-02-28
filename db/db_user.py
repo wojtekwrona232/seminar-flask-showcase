@@ -48,9 +48,9 @@ class DBUser(DB):
             self.util.get_session().add(self.user)
             self.util.get_session().commit()
             return True
-        except :
+        except Exception:
             self.util.session_rollback()
-            raise
+            raise Exception
 
     def delete_id(self, e_id):
         try:
