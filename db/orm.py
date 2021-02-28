@@ -22,7 +22,8 @@ class User(Base):
         return self.first_name + ' ' + self.last_name
 
     def __repr__(self):
-        return str(self.id) + '. ' + self.first_name + ' ' + self.last_name + '; ' + self.address.address + ', ' + self.address.city
+        return str(self.id) + '. ' + self.first_name + ' ' + self.last_name\
+               + '; ' + self.address.address + ', ' + self.address.city
 
 
 class Address(Base):
