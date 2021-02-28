@@ -11,9 +11,6 @@ class DBUser(DB):
         super().__init__()
         self.user = user
 
-    def __init_subclass__(cls, **kwargs):
-        super().__init_subclass__()
-
     def get_all(self):
         try:
             return self.util.get_session().query(User).all()
