@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#D:/PROJECTS/seminar-flask-showcase/db</OriginalElement>
+  <nodes>
+    <node x="492.0" y="240.0">db.db_address.DBAddress</node>
+    <node x="240.22222222222223" y="160.0">db.util.SQLUtil</node>
+    <node x="0.0" y="240.0">db.orm.User</node>
+    <node x="304.0" y="240.0">db.db_user.DBUser</node>
+    <node x="444.22222222222223" y="160.0">db.db.DB</node>
+    <node x="242.0" y="0.0">typing.Hashable</node>
+    <node x="104.0" y="160.0">Base</node>
+    <node x="140.0" y="240.0">db.orm.Address</node>
+    <node x="278.0" y="80.0">object</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="db.util.SQLUtil" target="object">
+      <point x="0.0" y="-15.0" />
+      <point x="316.22222222222223" y="135.0" />
+      <point x="318.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="object" target="typing.Hashable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="db.db_address.DBAddress" target="db.db.DB">
+      <point x="0.0" y="-15.0" />
+      <point x="600.0" y="215.0" />
+      <point x="516.2222222222222" y="215.0" />
+      <point x="24.0" y="15.0" />
+    </edge>
+    <edge source="db.orm.Address" target="Base">
+      <point x="0.0" y="-15.0" />
+      <point x="212.0" y="215.0" />
+      <point x="152.0" y="215.0" />
+      <point x="16.0" y="15.0" />
+    </edge>
+    <edge source="db.db.DB" target="object">
+      <point x="0.0" y="-15.0" />
+      <point x="492.22222222222223" y="135.0" />
+      <point x="344.66666666666663" y="135.0" />
+      <point x="26.66666666666663" y="15.0" />
+    </edge>
+    <edge source="db.orm.User" target="Base">
+      <point x="0.0" y="-15.0" />
+      <point x="60.0" y="215.0" />
+      <point x="120.0" y="215.0" />
+      <point x="-16.0" y="15.0" />
+    </edge>
+    <edge source="Base" target="object">
+      <point x="0.0" y="-15.0" />
+      <point x="136.0" y="135.0" />
+      <point x="291.33333333333337" y="135.0" />
+      <point x="-26.66666666666663" y="15.0" />
+    </edge>
+    <edge source="db.db_user.DBUser" target="db.db.DB">
+      <point x="0.0" y="-15.0" />
+      <point x="388.0" y="215.0" />
+      <point x="468.22222222222223" y="215.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="354.0" y="135.0" />
+  <SelectedNodes />
+  <Categories />
+</Diagram>
+

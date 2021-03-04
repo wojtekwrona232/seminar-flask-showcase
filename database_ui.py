@@ -65,3 +65,9 @@ def update_user():
 def delete_user(user_id):
     DBUser().delete_id(int(user_id))
     return redirect(url_for('/db.manage_data'))
+
+
+@third.route('/hybrid-property/<user_id>', methods=['GET'])
+def using_hybrid_property(user_id):
+    user = DBUser().get(int(user_id))
+    return jsonify(user.name)

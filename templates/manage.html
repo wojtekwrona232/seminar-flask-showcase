@@ -69,6 +69,9 @@
                         <a href="{{ url_for('/db.delete_user', user_id=u.id) }}" role="button" type="button"
                            class="btn btn-danger"
                            aria-pressed="true">Delete</a>
+                        <a href="{{ url_for('/db.using_hybrid_property', user_id=u.id) }}" role="button" type="button"
+                           class="btn btn-info"
+                           aria-pressed="true">Show</a>
                         <a href="{{ url_for('/db.update_user', user_id=u.id, first_name=u.first_name, last_name=u.last_name, address=u.address.address, city=u.address.city) }}"
                            role="button" type="button" class="btn btn-warning"
                            aria-pressed="true">Update</a>
