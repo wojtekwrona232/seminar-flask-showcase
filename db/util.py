@@ -8,54 +8,54 @@ from sqlalchemy.engine import create_engine
 
 
 class SQLUtil:
-    __engine = engine
-    __session = Session
-    __connection = engine
-    __transaction = engine
+    _engine = engine
+    _session = Session
+    _connection = engine
+    _transaction = engine
 
     def __init__(self):
-        self.create_engine()
-        self.open_session()
+        self._create_engine()
+        self._open_session()
 
     # creates new engine for orm
-    def create_engine(self):
+    def _create_engine(self):
         string = 'mysql+pymysql://root:@localhost:3306/seminar'
-        self.__engine = create_engine(string)
+        self._engine = create_engine(string)
 
     # return current engine for orm
     def get_engine(self):
-        return self.__engine
+        return self._engine
 
     # creates new session for orm
-    def open_session(self):
+    def _open_session(self):
         session = sessionmaker()
-        session.configure(bind=self.__engine)
-        self.__session = session()
+        session.configure(bind=self._engine)
+        self._session = session()
 
     def get_session(self):
-        return self.__session
+        return self._session
 
     def close_session(self):
-        self.__session.close()
+        self._session.close()
 
     def open_connection(self):
-        self.__connection = self.get_engine().connect()
+        self._connection = self.get_engine().connect()
 
     def get_connection(self):
-        return self.__connection
+        return self._connection
 
     def close_connection(self):
-        return self.__connection.close()
+        return self._connection.close()
 
     def transaction(self):
-        self.__transaction = self.__connection.begin()
+        self._transaction = self._connection.begin()
 
     def get_transaction(self):
-        return self.__transaction
+        return self._transaction
 
     def transaction_rollback(self):
-        return self.__transaction.rollback()
+        return self._transaction.rollback()
 
     def session_rollback(self):
-        return self.__session.rollback()
+        return self._session.rollback()
 
